@@ -292,6 +292,18 @@ module Sunspot #:nodoc:
         @max_memory ||= user_configuration_from_key('solr', 'max_memory')
       end
 
+      def file_encoding
+        @file_encoding ||= user_configuration_from_key('solr', 'file_encoding')
+      end
+
+      def user_language
+        @user_language ||= user_configuration_from_key('solr', 'user_language')
+      end
+
+      def user_country
+        @user_country ||= user_configuration_from_key('solr', 'user_country')
+      end
+
       #
       # Interface on which to run Solr
       #

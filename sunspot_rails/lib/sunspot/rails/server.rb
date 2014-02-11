@@ -80,6 +80,18 @@ module Sunspot
         configuration.max_memory
       end
 
+      def file_encoding
+        configuration.file_encoding
+      end
+
+      def user_language
+        configuration.user_language
+      end
+
+      def user_country
+        configuration.user_country
+      end
+
       private
 
       #

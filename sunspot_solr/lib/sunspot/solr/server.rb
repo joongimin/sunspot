@@ -99,6 +99,9 @@ module Sunspot
         command << "-Dsolr.data.dir=#{solr_data_dir}" if solr_data_dir
         command << "-Dsolr.solr.home=#{solr_home}" if solr_home
         command << "-Djava.util.logging.config.file=#{logging_config_path}" if logging_config_path
+        command << "-Dfile.encoding=#{file_encoding}" if file_encoding
+        command << "-Duser.language=#{user_language}" if user_language
+        command << "-Duser.country=#{user_country}" if user_country
         command << '-jar' << File.basename(solr_jar)
         FileUtils.cd(File.dirname(solr_jar)) do
           exec(*command)
